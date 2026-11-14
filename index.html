@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Гілка — квіткова майстерня</title>
+<meta name="description" content="Букети на замовлення, весільна флористика, доставка по місту. Підберіть букет за бюджетом.">
+<style>
+:root{--bg:#fdf1f3;--ink:#4a2c3a;--pk:#f4a6b8;--lv:#d9c9f0;--sg:#bfd8c4;--mut:#8a6a77}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font:17px/1.65 Candara,"Trebuchet MS",sans-serif;overflow-x:hidden}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.w{max-width:900px;margin:0 auto;padding:0 22px;position:relative}
+.blob{position:absolute;border-radius:62% 38% 55% 45%/48% 58% 42% 52%;z-index:0;filter:blur(2px)}
+header{display:flex;justify-content:space-between;align-items:center;padding:22px 0;position:relative;z-index:1}
+.logo{font:italic 700 32px Georgia,serif}
+header a{color:var(--ink);text-decoration:none;margin-left:20px}
+.hero{padding:50px 0 40px;position:relative;z-index:1}
+h1{font:italic 400 clamp(44px,10vw,92px)/1 Georgia,serif;max-width:12ch}
+.hero p{max-width:44ch;margin:18px 0 24px;color:var(--mut)}
+.btn{display:inline-block;background:var(--ink);color:#fff;padding:14px 30px;border-radius:40px;text-decoration:none;border:0;font:inherit;cursor:pointer}
+.sec{position:relative;z-index:1;margin:60px 0}
+h2{font:italic 400 clamp(28px,5vw,42px) Georgia,serif;margin-bottom:16px}
+.pick{background:#fff;border-radius:40px 40px 40px 8px;padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:30px;box-shadow:0 20px 50px rgba(74,44,58,.08)}
+label{display:block;font-weight:700;margin:0 0 6px}
+select{width:100%;padding:12px 16px;border:2px solid var(--pk);border-radius:30px;font:inherit;color:var(--ink);background:#fff;margin-bottom:18px}
+input[type=range]{width:100%;accent-color:#e0708f}
+.bud{font:700 34px Georgia,serif;margin:6px 0}
+.res{background:var(--lv);border-radius:30px;padding:26px;display:flex;flex-direction:column;justify-content:center}
+.res small{color:var(--mut)}
+.res h3{font:italic 400 30px Georgia,serif;margin:4px 0 8px}
+.res .emo{font-size:48px}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.gal div{aspect-ratio:1;border-radius:50% 50% 48% 52%/55% 45% 55% 45%;display:grid;place-items:center;font-size:52px;text-align:center}
+.gal span{display:block;font:15px Candara,sans-serif;margin-top:4px}
+.del{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+.del div{border-top:3px solid var(--pk);padding-top:12px}
+.del b{font:italic 700 22px Georgia,serif;display:block}
+footer{position:relative;z-index:1;padding:20px 0 40px;color:var(--mut);font-size:14px}
+@media(max-width:700px){.pick{grid-template-columns:1fr;padding:24px}}
+</style>
+</head>
+<body>
+<div class="blob" style="width:380px;height:380px;background:var(--lv);top:-120px;right:-140px;opacity:.7"></div>
+<div class="blob" style="width:300px;height:300px;background:var(--sg);top:520px;left:-150px;opacity:.6"></div>
+<div class="w">
+<header><span class="logo">Гілка</span><nav><a href="#pick">Підібрати</a><a href="#del">Доставка</a></nav></header>
+<section class="hero"><h1>Квіти, що говорять замість нас.</h1><p>Маленька майстерня з вікном на вулицю. Кожен букет збираємо руками за годину до того, як він поїде до вас.</p><a class="btn" href="#pick">Підібрати букет</a></section>
+
+<section class="sec" id="pick"><h2>Скажіть, для кого, і ми підкажемо</h2>
+<div class="pick"><div>
+<label for="oc">Нагода</label><select id="oc"><option>День народження</option><option>Просто так</option><option>Річниця</option><option>Подяка вчителю</option><option>Одужання</option></select>
+<label for="bd">Бюджет</label><input type="range" id="bd" min="500" max="4000" step="100" value="1200" aria-describedby="bv"><div class="bud" id="bv">1200 грн</div></div>
+<div class="res" aria-live="polite"><div class="emo" id="em">💐</div><small id="sm"></small><h3 id="nm"></h3><p id="cp"></p></div></div></section>
+
+<section class="sec"><h2>Що зараз у сезоні</h2>
+<div class="gal"><div style="background:var(--pk)"><p>🌷<span>Тюльпани</span></p></div><div style="background:var(--sg)"><p>🌿<span>Евкаліпт</span></p></div><div style="background:var(--lv)"><p>🪻<span>Лаванда</span></p></div><div style="background:#f7d9b5"><p>🌼<span>Ромашки</span></p></div></div></section>
+
+<section class="sec" id="del"><h2>Доставка й догляд</h2>
+<div class="del"><div><b>Протягом 2 годин</b>по місту, 80 грн, безкоштовно від 1500 грн</div><div><b>На певний час</b>скажіть, о котрій вручити, і ми не запізнимося</div><div><b>Листівка в подарунок</b>напишемо ваші слова від руки</div></div></section>
+<footer>Гілка · вул. Прикладна, 15 · щодня 9:00–20:00 · Демо-проєкт, дані вигадані</footer>
+</div>
+<script>
+const B=[[800,'Ранкова роса','Ромашки, евкаліпт і кілька гілочок лаванди','🌼'],[1500,'Тихий сад','Кущові троянди, тюльпани та зелень','🌷'],[2500,'Літній вечір','Півонії, ранункулюси та пампасна трава','🌸'],[4000,'Велика розмова','Півонієподібні троянди, гортензія, орхідея та сезонна зелень','💐']];
+const bd=document.getElementById('bd');
+function up(){const v=+bd.value,b=B.find(x=>v<=x[0])||B[3];document.getElementById('bv').textContent=v+' грн';
+document.getElementById('sm').textContent=document.getElementById('oc').value;document.getElementById('nm').textContent=b[1];document.getElementById('cp').textContent=b[2];document.getElementById('em').textContent=b[3]}
+bd.oninput=document.getElementById('oc').onchange=up;up();
+</script>
+</body>
+</html>
